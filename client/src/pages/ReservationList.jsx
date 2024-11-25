@@ -42,7 +42,6 @@ const ReservationList = () => {
       <Navbar />
       <h1 className="title-list">Your Reservation List</h1>
       <div className="list">
-<<<<<<< HEAD
   {reservationList?.map(({ listingId, hostId, startDate, endDate, totalPrice, booking = true }, index) => (
     <ListingCard
       key={`${listingId._id}-${startDate}-${index}`} // Unique key using listingId._id, startDate, and index
@@ -61,24 +60,6 @@ const ReservationList = () => {
   ))}
 </div>
 
-=======
-        {reservationList?.map(({ listingId, hostId, startDate, endDate, totalPrice, booking=true }) => (
-          <ListingCard
-            listingId={listingId._id}
-            creator={hostId._id}
-            listingPhotoPaths={listingId.listingPhotoPaths}
-            city={listingId.city}
-            province={listingId.province}
-            country={listingId.country}
-            category={listingId.category}
-            startDate={startDate}
-            endDate={endDate}
-            totalPrice={totalPrice}
-            booking={booking}
-          />
-        ))}
-      </div>
->>>>>>> f7a2dd412463f7549df09b33432ba1bedd0c4165
       <Footer />
     </>
   );

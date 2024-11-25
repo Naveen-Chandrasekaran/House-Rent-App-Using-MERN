@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import { useEffect, useState, useCallback } from "react";
-=======
-import { useEffect, useState } from "react";
->>>>>>> f7a2dd412463f7549df09b33432ba1bedd0c4165
 import { categories } from "../data";
 import "../styles/Listings.scss";
 import ListingCard from "./ListingCard";
@@ -13,19 +9,11 @@ import { setListings } from "../redux/state";
 const Listings = () => {
   const dispatch = useDispatch();
   const [loading, setLoading] = useState(true);
-<<<<<<< HEAD
-=======
-
->>>>>>> f7a2dd412463f7549df09b33432ba1bedd0c4165
   const [selectedCategory, setSelectedCategory] = useState("All");
 
   const listings = useSelector((state) => state.listings);
 
-<<<<<<< HEAD
   const getFeedListings = useCallback(async () => {
-=======
-  const getFeedListings = async () => {
->>>>>>> f7a2dd412463f7549df09b33432ba1bedd0c4165
     try {
       const response = await fetch(
         selectedCategory !== "All"
@@ -42,32 +30,20 @@ const Listings = () => {
     } catch (err) {
       console.log("Fetch Listings Failed", err.message);
     }
-<<<<<<< HEAD
   }, [selectedCategory, dispatch]);
 
   useEffect(() => {
     getFeedListings();
   }, [getFeedListings]);
-=======
-  };
-
-  useEffect(() => {
-    getFeedListings();
-  }, [selectedCategory]);
->>>>>>> f7a2dd412463f7549df09b33432ba1bedd0c4165
 
   return (
     <>
       <div className="category-list">
         {categories?.map((category, index) => (
           <div
-<<<<<<< HEAD
             className={`category ${
               category.label === selectedCategory ? "selected" : ""
             }`}
-=======
-            className={`category ${category.label === selectedCategory ? "selected" : ""}`}
->>>>>>> f7a2dd412463f7549df09b33432ba1bedd0c4165
             key={index}
             onClick={() => setSelectedCategory(category.label)}
           >
@@ -92,16 +68,10 @@ const Listings = () => {
               category,
               type,
               price,
-<<<<<<< HEAD
               booking = false,
             }) => (
               <ListingCard
                 key={_id}
-=======
-              booking=false
-            }) => (
-              <ListingCard
->>>>>>> f7a2dd412463f7549df09b33432ba1bedd0c4165
                 listingId={_id}
                 creator={creator}
                 listingPhotoPaths={listingPhotoPaths}

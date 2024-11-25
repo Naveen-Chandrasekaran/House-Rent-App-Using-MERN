@@ -21,14 +21,11 @@ app.use("/users", userRoutes)
 
 /* MONGOOSE SETUP */
 const PORT = 3001;
-<<<<<<< HEAD
 if (!process.env.MONGO_URL) {
   console.error("Error: MONGO_URL is not defined in the .env file.");
   process.exit(1);
 }
 
-=======
->>>>>>> f7a2dd412463f7549df09b33432ba1bedd0c4165
 mongoose
   .connect(process.env.MONGO_URL, {
     dbName: "Dream_Nest",

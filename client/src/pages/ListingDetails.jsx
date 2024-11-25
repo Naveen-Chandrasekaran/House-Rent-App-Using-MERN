@@ -104,7 +104,6 @@ const ListingDetails = () => {
         </div>
 
         <div className="photos">
-<<<<<<< HEAD
   {listing.listingPhotoPaths?.map((item, index) => (
     <img
       key={`${item}-${index}`} // Unique key
@@ -115,15 +114,6 @@ const ListingDetails = () => {
 </div>
 
 
-=======
-          {listing.listingPhotoPaths?.map((item) => (
-            <img
-              src={`http://localhost:3001/${item.replace("public", "")}`}
-              alt="listing photo"
-            />
-          ))}
-        </div>
->>>>>>> f7a2dd412463f7549df09b33432ba1bedd0c4165
 
         <h2>
           {listing.type} in {listing.city}, {listing.province},{" "}
@@ -141,10 +131,7 @@ const ListingDetails = () => {
               "public",
               ""
             )}`}
-<<<<<<< HEAD
             alt=""
-=======
->>>>>>> f7a2dd412463f7549df09b33432ba1bedd0c4165
           />
           <h3>
             Hosted by {listing.creator.firstName} {listing.creator.lastName}

@@ -13,7 +13,6 @@ const Categories = () => {
       </p>
 
       <div className="categories_list">
-<<<<<<< HEAD
   {categories?.slice(1, 7).map((category, index) => (
     <Link to={`/properties/category/${category.label}`} key={index}>
       <div className="category">
@@ -27,21 +26,6 @@ const Categories = () => {
     </Link>
   ))}
 </div>
-=======
-        {categories?.slice(1, 7).map((category, index) => (
-          <Link to={`/properties/category/${category.label}`}>
-            <div className="category" key={index}>
-              <img src={category.img} alt={category.label} />
-              <div className="overlay"></div>
-              <div className="category_text">
-                <div className="category_text_icon">{category.icon}</div>
-                <p>{category.label}</p>
-              </div>
-            </div>
-          </Link>
-        ))}
-      </div>
->>>>>>> f7a2dd412463f7549df09b33432ba1bedd0c4165
     </div>
   );
 };
