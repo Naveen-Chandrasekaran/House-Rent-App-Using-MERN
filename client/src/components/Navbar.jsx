@@ -26,6 +26,7 @@ const Navbar = () => {
       </a>
 
       <div className="navbar_search">
+<<<<<<< HEAD
   <input
     type="text"
     placeholder="Search ..."
@@ -40,6 +41,21 @@ const Navbar = () => {
   </IconButton>
 </div>
 
+=======
+        <input
+          type="text"
+          placeholder="Search ..."
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+        />
+        <IconButton disabled={search === ""}>
+          <Search
+            sx={{ color: variables.pinkred }}
+            onClick={() => {navigate(`/properties/search/${search}`)}}
+          />
+        </IconButton>
+      </div>
+>>>>>>> f7a2dd412463f7549df09b33432ba1bedd0c4165
 
       <div className="navbar_right">
         {user ? (

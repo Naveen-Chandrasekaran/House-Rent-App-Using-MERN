@@ -79,7 +79,11 @@ const ListingCard = ({
             <div key={index} className="slide">
               <img
                 src={`http://localhost:3001/${photo?.replace("public", "")}`}
+<<<<<<< HEAD
                 alt={`listings ${index + 1}`}
+=======
+                alt={`photo ${index + 1}`}
+>>>>>>> f7a2dd412463f7549df09b33432ba1bedd0c4165
               />
               <div
                 className="prev-button"
